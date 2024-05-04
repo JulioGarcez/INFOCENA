@@ -4,13 +4,89 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nossos Produtos</title>
+    <script>
+        //FUNÇÃO DE "VOLTAR" NAS PÁGINAS
+        function goBack() {
+            window.history.back();
+        }
+
+    </script>
+    <style>
+        #imagemProduto {
+            width: 300px;
+            height: 300px;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-        <div>
-            <select id="produtos" name="produtos">
-                <option>Selecione o produto</option>
-                
+    <h1>Nossos produtos</h1>
+    <p>Ao selecionar os produtos de sua preferência, as imagens aparecerão automaticamente.</p>
+    <p>CLIQUE NA CAIXA ABAIXO</p>
+    <div>
+        <select id="produtos" name="produtos" onchange="mostrarImagem(this.value)">
+            <option>Selecione o produto</option>
+            <option value="Processador Intel i3">Processador Intel i3</option> 
+            <option value="Processador Intel i5">Processador Intel i5</option>
+            <option value="Processador Intel i7">Processador Intel i7</option>
+            <option value="Placa-mãe">Placa-mãe</option>
+            <option value="Headset">Headset</option>
+            <option value="Notebook Dell">Notebook Dell</option>
+            <option value="Notebook Samsung">Notebook Samsung</option>
+            <option value="iPhone">iPhone</option>
+            <option value="PS4">PS4</option>
+            <option value="Fifa 18">Fifa 18</option>
+            <option value="Impressora HP">Impressora HP</option>
+        </select>
+        <img id="imagemProduto" src="" alt="Imagem do Produto" />
     </div>
+
+    <script>
+        function mostrarImagem(produto) {
+            var imagem = document.getElementById('imagemProduto');
+            switch(produto) {
+                case 'Processador Intel i3':
+                    imagem.src = 'https://http2.mlstatic.com/D_NQ_NP_834364-MLA41292994583_032020-O.webp';
+                    break;
+                case 'Processador Intel i5':
+                    imagem.src = 'https://images.tcdn.com.br/img/img_prod/664937/processador_intel_core_i5_2400_6m_de_cache_3_40_ghz_4787_1_20200114120700.jpg';
+                    break;
+                case 'Processador Intel i7':
+                    imagem.src = 'https://http2.mlstatic.com/D_NQ_NP_900137-MLU72453293773_102023-O.webp';
+                    break;
+                case 'Placa-mãe':
+                    imagem.src = 'https://th.bing.com/th/id/R.344d06f6515a5cf93e6040e020ce6b5e?rik=6Gm%2b1%2fhqytIu4A&pid=ImgRaw&r=0';
+                    break;
+                case 'Headset':
+                    imagem.src = 'https://http2.mlstatic.com/D_NQ_NP_790267-MLU71559595272_092023-O.webp';
+                    break;
+                case 'Notebook Dell':
+                    imagem.src = 'https://th.bing.com/th/id/R.51a102415fa7290da1e20f1c9568d113?rik=snwoujHQbbJsrA&riu=http%3a%2f%2fc.mlcdn.com.br%2f1500x1500%2fnotebook-dell-inspiron-i15-7559-a10-gamingedition-intel-core-i5-8gb-1tb-15-6-34-windows-10-216273200.jpg&ehk=qZ15yiwOLT4fXTfl2QpZRoMiI5YxLuusNIrm04grzB4%3d&risl=&pid=ImgRaw&r=0';
+                    break;
+                case 'Notebook Samsung':
+                    imagem.src = 'https://www.bhphotovideo.com/images/images2500x2500/samsung_np500r5l_m03us_15_6_notebook_5_1258544.jpg';
+                    break;
+                case 'iPhone':
+                    imagem.src = 'https://th.bing.com/th/id/R.8f6d6564bc7a69613ef8de097906b5ee?rik=%2baQpNhAyNV311w&pid=ImgRaw&r=0';
+                    break;
+                case 'PS4':
+                    imagem.src = 'https://gocdkeys.com/images/captures/sony-ps4-playstation-4-slim-500gb-console-1.jpg';
+                    break;
+                case 'Fifa 18':
+                    imagem.src = 'https://th.bing.com/th/id/OIP.XCugdJSg7nVzP923Ax9vMAHaJQ?rs=1&pid=ImgDetMain';
+                    break;
+                case 'Impressora HP':
+                    imagem.src = 'https://th.bing.com/th/id/R.ee928cf1ad71c456d5e9452ccd5fcd2a?rik=BG9EA9DSrYJuKg&pid=ImgRaw&r=0';
+                    break;
+                // Adicione mais casos conforme necessário
+                default:
+                    imagem.src = '';
+                    break;
+            }
+        }
+    </script>
+    
+      <button onclick="goBack()">Voltar</button>
 </body>
 </html>

@@ -4,14 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lojas</title>
+    <script>
+        // FUNÇÃO DE "VOLTAR" NAS PÁGINAS
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Lojas</h1>
-    <p>Casa do Hardware
-    <p>Bom Preço
-    <p>Info Computer
-    <p>Game House
-    <p>Zaza Info
+    <table>
+        <tr>
+            <th>Loja</th>
+            <th>Stand</th>
+            <th>Telefone</th>
+        </tr>
+        <tr>
+            <td>Casa do Hardware</td>
+            <td>1</td>
+            <td>2010-1000</td>
+        </tr>
+        <tr>
+            <td>Bom Preço</td>
+            <td>2</td>
+            <td>2010-1001</td>
+        </tr>
+        <tr>
+            <td>Info Computer</td>
+            <td>3</td>
+            <td>2111-2001</td>
+        </tr>
+        <tr>
+            <td>Game House</td>
+            <td>4</td>
+            <td>91828-2929</td>
+        </tr>
+        <tr>
+            <td>Zaza Info</td>
+            <td>5</td>
+            <td>98272-1929</td>
+        </tr>
+    </table>
+
+    <button onclick="goBack()">Voltar</button>
 </body>
 </html>
